@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Objects;
 
 
 @RestController  //需要被扫描的类
@@ -20,6 +21,21 @@ public class MyGetMethod {
 
     }
 
-    
+    /**
+     * 要求客户端携带cookies访问
+     */
+    public String getWithCookies(HttpServletRequest request){
+       Cookie[] cookies = request.getCookies();
+       if (Objects.isNull(cookies)){
+           return "你必须携带Cookies信息访问";
+       }
+      for (Cookie cookie : cookies){
+          if (cookie.getName().equals("login")&&cookie.getValue().equals("true")){
+              return "恭喜你访问成功";
+          }
+      }
+
+
+    }
 
 }
