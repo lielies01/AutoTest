@@ -7,10 +7,19 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Chapter" />
+        <module name="ChapterMock" />
+        <module name="Chapter2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Chapter" target="1.5" />
+      <module name="Chapter2" target="1.8" />
+      <module name="ChapterMock" target="1.5" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Chapter2" options="-parameters" />
+    </option>
   </component>
 </project>
