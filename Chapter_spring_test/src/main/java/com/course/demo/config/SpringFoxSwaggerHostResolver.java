@@ -2,8 +2,9 @@ package com.course.demo.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.servers.Server;
-import org.springframework.stereotype.Component;
+//import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
+import springfox.documentation.oas.annotations.EnableOpenApi;
 import springfox.documentation.oas.web.OpenApiTransformationContext;
 import springfox.documentation.oas.web.WebMvcOpenApiTransformationFilter;
 import springfox.documentation.spi.DocumentationType;
@@ -15,7 +16,8 @@ import java.util.List;
 /**
  * 通过swagger过滤器实现对servers URL的修改
  */
-@Component
+@EnableOpenApi
+//@Component
 public class SpringFoxSwaggerHostResolver implements WebMvcOpenApiTransformationFilter {
     @Override
     public OpenAPI transform(OpenApiTransformationContext<HttpServletRequest> context) {

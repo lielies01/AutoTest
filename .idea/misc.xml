@@ -6,7 +6,6 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/Chapter/pom.xml" />
         <option value="$PROJECT_DIR$/ChapterMock/pom.xml" />
         <option value="$PROJECT_DIR$/Chapter_spring_test/pom.xml" />
       </list>

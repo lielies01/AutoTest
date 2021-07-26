@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/AutoTest.iml" filepath="$PROJECT_DIR$/.idea/AutoTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Chapter/Chapter.iml" filepath="$PROJECT_DIR$/Chapter/Chapter.iml" />
       <module fileurl="file://$PROJECT_DIR$/ChapterMock/ChapterMock.iml" filepath="$PROJECT_DIR$/ChapterMock/ChapterMock.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter_spring_test/Chapter_spring_test.iml" filepath="$PROJECT_DIR$/Chapter_spring_test/Chapter_spring_test.iml" />
     </modules>
