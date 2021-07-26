@@ -1,4 +1,4 @@
-package com.course.demo1.config;
+package com.course.demo.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.servers.Server;

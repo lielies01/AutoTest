@@ -1,4 +1,4 @@
-package com.course.demo1.controller;
+package com.course.demo.controller;
 
 import io.swagger.annotations.*;
 import org.springframework.web.bind.annotation.*;

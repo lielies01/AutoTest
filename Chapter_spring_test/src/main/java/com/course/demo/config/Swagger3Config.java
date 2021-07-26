@@ -1,4 +1,4 @@
-package com.course.demo1.config;
+package com.course.demo.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -22,7 +22,7 @@ public class Swagger3Config implements WebMvcConfigurer {
         return new Docket(DocumentationType.OAS_30)
                 .select()
                 //通过apis方法配置要扫描的controller的位置
-                .apis(RequestHandlerSelectors.basePackage("com.course.demo1.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.course.demo.controller"))  //demo.controller
                 //通过paths方法配置路径
                 .paths(PathSelectors.any())
                 //设置需要排除的路径(如果需要)

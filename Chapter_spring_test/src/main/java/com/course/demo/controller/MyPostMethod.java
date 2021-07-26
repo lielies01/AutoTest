@@ -1,4 +1,4 @@
-package com.course.demo1.controller;
+package com.course.demo.controller;
 
 
 import io.swagger.annotations.Api;
@@ -12,7 +12,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 
 @RestController
-@Api(tags = "这是我的全部Post请求")
+@Api(tags = "这是我的全部Post请求")    //标题注释
 @RequestMapping("/v1")
 public class MyPostMethod {
 
@@ -22,9 +22,6 @@ public class MyPostMethod {
    /**
     *  用户登录成功获取到cookies，然后再访问其他接口
     */
-
-
-
    @ApiOperation(value = "登录接口,登录成功后获取cookies信息",httpMethod = "POST")
    @RequestMapping(value = "/login",method = RequestMethod.POST)
    public String login(HttpServletResponse response,

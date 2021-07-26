@@ -9,7 +9,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Chapter" />
         <module name="ChapterMock" />
-        <module name="Chapter2" />
         <module name="Chapter_spring_test" />
       </profile>
     </annotationProcessing>
