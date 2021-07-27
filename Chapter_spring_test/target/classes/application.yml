@@ -1,21 +1,22 @@
 server:
   port: 8888
 
-logging:
-  path: logs
-  file: mylog.log
+#logging:
+#  path: logs
+#  file: mylog.log
 
 
 spring:
   application:
-    name: report
+    name: reportMingzi
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.1.7:3306/course
-    username: admin
-    password: 123456
+    url: jdbc:mysql://172.16.36.8:7999/fans_growing
+    username: root
+    password: zdf_db_admin
 
 mybatis:
-  type-aliases-package: com.course.model
+  type-aliases-package: com.course.demo.model
+#  config.path: mybatis-config.xml
   mapper-locations:
     - mapper/*
