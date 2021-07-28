@@ -13,16 +13,16 @@ public class UserName {
     private String sex;
     private String isDelete;
 
-    public String toString(){
-        return (
-                "{id:"+id+","+
-                "userName:" +userName +","+
-                "password:"+password+","+
-                "age:"+age+","+
-                "sex:"+sex+","+
-                "isDelete:"+isDelete+"}"
-        );
+//    public String toString(){
+//        return (
+//                "{id:"+id+","+
+//                "userName:" +userName +","+
+//                "password:"+password+","+
+//                "age:"+age+","+
+//                "sex:"+sex+","+
+//                "isDelete:"+isDelete+"}"
+//        );
 
-    }
+//    }
 
 }

@@ -9,6 +9,7 @@ public class LoginCase {
         private String password;
         private String age;
         private String sex;
+        private String expected;
         private String isDelete;
 
         public String toString(){
@@ -18,6 +19,7 @@ public class LoginCase {
                                 "password:"+password+","+
                                 "age:"+age+","+
                                 "sex:"+sex+","+
+                                "expected:"+expected+","+
                                 "isDelete:"+isDelete+"}"
                 );
 

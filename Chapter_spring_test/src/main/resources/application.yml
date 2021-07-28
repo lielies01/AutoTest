@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: 12306
 
 #logging:
 #  path: logs
@@ -10,7 +10,7 @@ spring:
   application:
     name: reportMingzi
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://172.16.36.8:7999/fans_growing
     username: root
     password: zdf_db_admin

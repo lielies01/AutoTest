@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @RestController
 @Api(tags = "这是我的全部Post请求")    //标题注释
-@RequestMapping("/v1")
+@RequestMapping("/v2")
 public class MyPostMethod {
 
    //这个变量装载Cookies信息

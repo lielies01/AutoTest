@@ -25,5 +25,5 @@ public class TestConfig {
     public static CookieStore store;
 
 
-
+    public static String addUserUrl;
 }
