@@ -6,11 +6,17 @@
 <mapper namespace="com.course.demo.model">
 
     <!--登陆接口sql,对应的xml文件和接口文件的文件名称必须相同parameterType="com.course.demo.model.UserName" -->
-    <select id="loginCase" parameterType="com.course.demo.model.UserName" resultType="Integer" >
+    <select id="login" parameterType="com.course.demo.model.UserName" resultType="Integer" >
 
         select count(*) from User_lanhanhua
         where userName=#{userName}
         and password=#{password}
+    </select>
+<!--执行登录接口用例-->
+    <select id="loginCase" parameterType="com.course.demo.model.LoginCase" resultType="com.course.demo.model.LoginCase" >
+
+        select * from User_lanhanhua
+        where id =#{id}
     </select>
 
 

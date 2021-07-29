@@ -31,7 +31,7 @@ public class UserManager {
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public Boolean login(HttpServletResponse response,
                          @RequestBody UserName user){
-        int i  = template.selectOne("loginCase",user);
+        int i  = template.selectOne("login",user);
         Cookie cookie = new Cookie("login","true");
         response.addCookie(cookie);
 
