@@ -5,21 +5,22 @@
 
 <mapper namespace="com.course.demo.model">
 
-    <!--登陆接口sql,对应的xml文件和接口文件的文件名称必须相同-->
-    <select id="loginCase" parameterType="com.course.demo.model.LoginCase"  resultType="com.course.demo.model.LoginCase">
+    <!--登陆接口sql,对应的xml文件和接口文件的文件名称必须相同parameterType="com.course.demo.model.UserName" -->
+    <select id="loginCase" parameterType="com.course.demo.model.UserName" resultType="Integer" >
 
-        select * from User_lanhanhua
-        where id = #{id}
+        select count(*) from User_lanhanhua
+        where userName=#{userName}
+        and password=#{password}
     </select>
 
 
 
-<!--    添加用户接口-->
-    <insert id="addUser" parameterType="com.course.demo.model.UserName">
-        insert into
-        User_lanhanhua (userName,password,sex,age,permission,isDelete)
-        values (#{userName},#{password},#{sex},#{age},#{permission},#{isDelete})
-    </insert>
+<!--&lt;!&ndash;    添加用户接口&ndash;&gt;-->
+<!--    <insert id="addUser" parameterType="com.course.demo.model.UserName">-->
+<!--        insert into-->
+<!--        User_lanhanhua (userName,password,sex,age,permission,isDelete)-->
+<!--        values (#{userName},#{password},#{sex},#{age},#{permission},#{isDelete})-->
+<!--    </insert>-->
 
 <!--    &lt;!&ndash;获取用户信息sql&ndash;&gt;-->
 <!--    <select id="getUserInfo" parameterType="com.course.demo.model.UserName" resultType="com.course.demo.model.UserName">-->

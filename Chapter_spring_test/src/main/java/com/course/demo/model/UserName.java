@@ -12,17 +12,20 @@ public class UserName {
     private String age;
     private String sex;
     private String isDelete;
+    private String permission;
 
-//    public String toString(){
-//        return (
-//                "{id:"+id+","+
-//                "userName:" +userName +","+
-//                "password:"+password+","+
-//                "age:"+age+","+
-//                "sex:"+sex+","+
-//                "isDelete:"+isDelete+"}"
-//        );
+    @Override
+    public String toString(){
+        return (
+                "{id:"+id+","+
+                "userName:" +userName +","+
+                "password:"+password+","+
+                "age:"+age+","+
+                "sex:"+sex+","+
+                "permission:"+permission+","+
+                "isDelete:"+isDelete+"}"
+        );
 
-//    }
+    }
 
 }

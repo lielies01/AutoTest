@@ -25,19 +25,22 @@ public class UserManager {
     //首先获取一个执行sql语句的对象
 
     @Autowired
-    private SqlSessionTemplate template;
+    private SqlSessionTemplate template;  //访问数据库对象
 
     @ApiOperation(value = "登陆接口",httpMethod = "POST")
     @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public Boolean login(HttpServletResponse response, @RequestBody UserName user){
-        int i  = template.selectOne("login",user);
+    public Boolean login(HttpServletResponse response,
+                         @RequestBody UserName user){
+        int i  = template.selectOne("loginCase",user);
         Cookie cookie = new Cookie("login","true");
         response.addCookie(cookie);
+
         log.info("查看到的结果是"+i);
         if(i==1){
+            log.info("登录成功："+ user.getUserName());
             return true;
         }
-
+        log.info("登录失败："+ user.getUserName());
         return false;
     }
     @ApiOperation(value = "添加用户接口",httpMethod = "POST")

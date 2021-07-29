@@ -47,9 +47,12 @@ public class LoginTest {
 ////        //下边的代码为写完接口的测试代码
         String result = getResult(LoginCase);
 ////        //处理结果，就是判断返回结果是否符合预期
-        Assert.assertEquals(LoginCase.getExpected(),result);
+       //
+        //
+       Assert.assertEquals(LoginCase.getExpected(),result);
         System.out.println(TestConfig.loginUrl);
-
+        System.out.println("1111实际结果："+result );
+        System.out.println("预期结果："+ LoginCase.getExpected());
     }
 
 
@@ -57,16 +60,19 @@ public class LoginTest {
     @Test(description = "用户登陆失败接口")
     public void loginFalse() throws IOException {
         SqlSession session = DatabaseUtil.getSqlSession();
-        LoginCase LoginCase = session.selectOne("loginCase",2);  // S 为mapper对应SQL语句中对应的ID，取ID为1的数据
+        LoginCase LoginCase = session.selectOne("loginCase",1);  // S 为mapper对应SQL语句中对应的ID，取ID为1的数据
         System.out.println(LoginCase.toString());  //打出取值
         System.out.println(TestConfig.loginUrl);  //打出URL
+        System.out.println("预期结果："+ LoginCase.getExpected());
+
 
 
 
         //下边的代码为写完接口的测试代码
         String result = getResult(LoginCase);
 //        处理结果，就是判断返回结果是否符合预期
-        System.out.println(LoginCase.getExpected());
+        System.out.println("实际结果："+result );
+        System.out.println("失败预期结果："+LoginCase.getExpected());
         Assert.assertEquals(LoginCase.getExpected(),result);
 
     }
