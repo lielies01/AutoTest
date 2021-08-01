@@ -92,7 +92,7 @@ public class LoginTest {
         String result;
         //执行post方法
         HttpResponse response = TestConfig.defaultHttpClient.execute(post);
-        //获取响应结果
+        //获取响应结果  // 从响应中提取出响应主体
         result = EntityUtils.toString(response.getEntity(),"utf-8");
         System.out.println(result);
         TestConfig.store = TestConfig.defaultHttpClient.getCookieStore();

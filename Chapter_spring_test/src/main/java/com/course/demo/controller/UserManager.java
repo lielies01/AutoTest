@@ -25,7 +25,7 @@ public class UserManager {
     //首先获取一个执行sql语句的对象
 
     @Autowired
-    private SqlSessionTemplate template;  //访问数据库对象
+    private  SqlSessionTemplate template;  //访问数据库对象
 
     @ApiOperation(value = "登陆接口",httpMethod = "POST")
     @RequestMapping(value = "/login",method = RequestMethod.POST)
@@ -33,11 +33,11 @@ public class UserManager {
                          @RequestBody UserName user){
         int i  = template.selectOne("login",user);
         Cookie cookie = new Cookie("login","true");
-        response.addCookie(cookie);
+        response.addCookie(cookie); //返回cookies
 
         log.info("查看到的结果是"+i);
         if(i==1){
-            log.info("登录成功："+ user.getUserName());
+            log.info("登录成功："+"登录的用户名："+ user.getUserName());
             return true;
         }
         log.info("登录失败："+ user.getUserName());
@@ -49,7 +49,7 @@ public class UserManager {
         Boolean x = verifyCookies(request);
         int result = 0;
         if(x != null){
-            result = template.insert("addUser",user);
+            result = template.insert("AddUserCase",user);  //插入数据
         }
         if(result>0){
             log.info("添加用户的数量是:"+result);
@@ -58,6 +58,7 @@ public class UserManager {
         return false;
     }
 
+    //获取cookies
     private Boolean verifyCookies(HttpServletRequest request) {
         Cookie[] cookies = request.getCookies();
         if(Objects.isNull(cookies)){
