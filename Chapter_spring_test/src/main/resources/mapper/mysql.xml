@@ -18,15 +18,25 @@
         select * from User_lanhanhua
         where id =#{id}
     </select>
+<!--    新增用户信息-->
+    <select id="addUser" parameterType="com.course.demo.model.AddUserCase" resultType="com.course.demo.model.UserName" >
 
+        select * from User_lanhanhua
+        where uesrName=#{uesrName}
+        and password=#{password}
+        and sex =#{permission}
+        and age =#{age}
+        and permission=#{permission}
+        and isDelete =#{isDelete}
+    </select>
 
 
 <!--&lt;!&ndash;    添加用户接口&ndash;&gt;-->
-<!--    <insert id="addUser" parameterType="com.course.demo.model.UserName">-->
-<!--        insert into-->
-<!--        User_lanhanhua (userName,password,sex,age,permission,isDelete)-->
-<!--        values (#{userName},#{password},#{sex},#{age},#{permission},#{isDelete})-->
-<!--    </insert>-->
+    <insert id="AddUserCase" parameterType="com.course.demo.model.UserName">
+        insert into
+        User_lanhanhua (userName,password,sex,age,permission,isDelete)
+        values (#{userName},#{password},#{sex},#{age},#{permission},#{isDelete})
+    </insert>
 
 <!--    &lt;!&ndash;获取用户信息sql&ndash;&gt;-->
 <!--    <select id="getUserInfo" parameterType="com.course.demo.model.UserName" resultType="com.course.demo.model.UserName">-->

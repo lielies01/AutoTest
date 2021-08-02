@@ -53,6 +53,7 @@ public class UserManager {
         }
         if(result>0){
             log.info("添加用户的数量是:"+result);
+            System.out.println(result);
             return true;
         }
         return false;
