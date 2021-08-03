@@ -49,7 +49,7 @@ public class UserManager {
         Boolean x = verifyCookies(request);
         int result = 0;
         if(x != null){
-            result = template.insert("AddUserCase",user);  //插入数据
+            result = template.insert("AddUser",user);  //插入数据
         }
         if(result>0){
             log.info("添加用户的数量是:"+result);

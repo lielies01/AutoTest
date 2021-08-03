@@ -1,9 +1,9 @@
 server:
   port: 12306
 
-#logging:
-#  path: logs
-#  file: mylog.log
+log:
+  path: K:\lanhanhua\logs
+  file: mylog.log
 
 
 spring:

@@ -32,7 +32,7 @@ public class LoginTest {
 //        TestConfig.getUserListUrl = ConfigFile.getUrl(InterfaceName.GETUSERLIST);
 //        TestConfig.updateUserInfoUrl =ConfigFile.getUrl(InterfaceName.UPDATEUSERINFO);
         TestConfig.loginUrl = ConfigFile.getUrl(InterfaceName.LOGIN);
-        TestConfig.defaultHttpClient =new DefaultHttpClient();
+        //TestConfig.defaultHttpClient =new DefaultHttpClient();
 
        // System.out.println(TestConfig.loginUrl);
     }
@@ -42,7 +42,7 @@ public class LoginTest {
     public void loginTrue() throws IOException {
 
         SqlSession session = DatabaseUtil.getSqlSession();
-        LoginCase LoginCase = session.selectOne("loginCase",2);  // S 为mapper对应SQL语句中对应的ID，取ID为1的数据
+        LoginCase LoginCase = session.selectOne("loginCase",1);  // S 为mapper对应SQL语句中对应的ID，取ID为1的数据
         System.out.println(LoginCase.toString());  //打出取值
         System.out.println(TestConfig.loginUrl);  //打出URL
 
@@ -62,7 +62,7 @@ public class LoginTest {
     @Test(description = "用户登陆失败接口")
     public void loginFalse() throws IOException {
         SqlSession session = DatabaseUtil.getSqlSession();
-        LoginCase LoginCase = session.selectOne("loginCase",1);  // S 为mapper对应SQL语句中对应的ID，取ID为1的数据
+        LoginCase LoginCase = session.selectOne("loginCase",2);  // S 为mapper对应SQL语句中对应的ID，取ID为1的数据
         System.out.println(LoginCase.toString());  //打出取值
         System.out.println(TestConfig.loginUrl);  //打出URL
         System.out.println("预期结果："+ LoginCase.getExpected());

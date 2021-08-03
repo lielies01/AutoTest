@@ -22,7 +22,7 @@ public class AddUserTest {
     public void addUser() throws IOException {
 
         SqlSession session = DatabaseUtil.getSqlSession();
-        AddUserCase addUserCase = session.selectOne("addUser",1);
+        AddUserCase addUserCase = session.selectOne("AddUserCase",3);
         System.out.println(addUserCase.toString());
         System.out.println(TestConfig.addUserUrl);
 
@@ -30,9 +30,11 @@ public class AddUserTest {
         String result = getResult(addUserCase);
 
         //验证返回结果
-        UserName user = session.selectOne("addUser",addUserCase);
-        System.out.println(user.toString());
+        UserName user = session.selectOne("AddUser",addUserCase);
+        //System.out.println(user.toString());
 
+
+        System.out.println(result);
         Assert.assertEquals(addUserCase.getExpected(),result);
 
     }

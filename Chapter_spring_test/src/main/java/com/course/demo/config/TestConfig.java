@@ -17,7 +17,7 @@ public class TestConfig {
 //    //获取用户信息接口uri
 //    public static String getUserInfoUrl;
 //    //添加用户信息接口
-//    public static String addUserUrl;
+    public static String addUserUrl;
 //    //声明http客户端
     public static DefaultHttpClient defaultHttpClient;
 
@@ -25,5 +25,5 @@ public class TestConfig {
     public static CookieStore store;
 
 
-    public static String addUserUrl;
+
 }
