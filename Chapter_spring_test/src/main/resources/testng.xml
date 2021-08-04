@@ -58,8 +58,8 @@
 
 
 <!--    </test>-->
-<!--    <listeners>-->
-<!--        <listener class-name="com.course.demo.config.ExtentTestNGIReporterListener" />-->
-<!--    </listeners>-->
+    <listeners>
+        <listener class-name="com.course.demo.config.ExtentTestNGIReporterListener" />
+    </listeners>
 
 </suite>

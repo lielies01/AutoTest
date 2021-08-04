@@ -1,7 +1,7 @@
 server:
   port: 12306
 
-log:
+logging:
   path: K:\lanhanhua\logs
   file: mylog.log
 
@@ -20,3 +20,4 @@ mybatis:
 #  config.path: mybatis-config.xml
   mapper-locations:
     - mapper/*
+

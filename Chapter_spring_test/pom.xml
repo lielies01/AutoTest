@@ -116,8 +116,14 @@
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
-            <version>5.0.8</version>
+            <version>3.0.6</version>
             </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.github.sdrss</groupId>-->
+<!--            <artifactId>reportng</artifactId>-->
+<!--            <version>2.6.3</version>-->
+<!--        </dependency>-->
+
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>

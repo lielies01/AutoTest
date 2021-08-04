@@ -30,11 +30,12 @@ public class AddUserTest {
         String result = getResult(addUserCase);
 
         //验证返回结果
-        UserName user = session.selectOne("AddUser",addUserCase);
+        //UserName user = session.selectOne("AddUser",addUserCase);
         //System.out.println(user.toString());
 
 
-        System.out.println(result);
+        System.out.println("实际结果："+ result);
+        System.out.println("预期结果"+ addUserCase.getExpected());
         Assert.assertEquals(addUserCase.getExpected(),result);
 
     }
